@@ -1,0 +1,226 @@
+html {
+   font-size: 14px;
+ }
+ 
+ body {
+   font-family: 'Noto Sans JP', sans-serif;     
+ }
+ 
+ h1 {
+   font-size: 1.5rem;
+ }
+ 
+ h2 {
+    font-size: 1.475rem;
+  }
+  
+ h3 {
+     font-size: 1.3rem;
+  }
+ 
+ a {
+   color: darkorange;
+   text-decoration: none !important;
+ }
+ 
+ a:hover {
+     color: orange;
+ }
+ 
+ .alert-info {
+	background-color: lightyellow; /* 背景色を変更 */
+	 color: black; /* 文字色を変更 */
+	 border-color: lightyellow; /* 枠線の色を変更 */
+ }
+ 
+ footer {
+   width: 100%;
+   height: 60px;
+   position: absolute;
+   bottom: 0;    
+   background-color: #f2f0eb;
+ }
+ 
+ .nagoyameshi-wrapper {
+   min-height: 100vh;
+   position: relative;
+   padding-bottom: 60px;
+   box-sizing: border-box;
+ }
+ 
+ .nagoyameshi-navbar {
+   min-height: 50px;      
+ }
+ 
+ .nagoyameshi-logo {
+   height: 50px;  
+ }
+ 
+ .nagoyameshi-btn {
+   background-color: darkorange !important;   
+   transition: 0.1s;
+ }
+ 
+ .nagoyameshi-btn:hover {
+   opacity: 0.8;   
+ }
+ 
+ .nagoyameshi-page-link {
+    color: orange;
+  }
+  
+  .nagoyameshi-page-link:hover {
+    color: darkorange;
+  }
+  
+  .nagoyameshi-active {
+    background-color: orange !important;
+    border-color: orange !important;
+  }
+  
+  .nagoyameshi-pre-wrap {
+    /* 改行文字で行を折り返す */
+    white-space: pre-wrap;
+  }
+
+  .nagoyameshi-link-danger {
+       color: #f2594b;
+   }
+   
+   .nagoyameshi-link-danger:hover {
+       color: #a63c3c;
+   }
+   
+   .nagoyameshi-btn-danger {
+       background-color: #f2594b !important;
+       transition: 0.1s;
+   }
+   
+   .nagoyameshi-btn-danger:hover {
+     opacity: 0.8;   
+   }
+   
+   .nagoyameshi-dropdown-item:active {
+     background-color: orange;
+   }
+   
+   .nagoyameshi-card-link {
+     transition: 0.3s;
+   }
+
+   .nagoyameshi-card-link:hover {
+     opacity: 0.7;
+   }
+
+   .nagoyameshi-horizontal-card-image {
+     width: 100%;
+     height: 240px;
+     object-fit: cover;
+   }
+  
+   .nagoyameshi-sort-box {
+     width: 150px;
+   }
+   
+   .nagoyameshi-vertical-card-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    
+    .nagoyameshi-search-form {
+        max-width: 300px;
+    }
+   
+	.nagoyameshi-star {
+	    color: #ffa500;
+	} 
+
+	.nagoyameshi-star:focus {
+	    color: #ffa500;
+	}
+
+	#signup-btn {
+	    display: block;
+	    width: 100%;
+	    height: 120px; /* ボタンの高さを設定 */
+	    font-size: 18px; /* フォントサイズを設定 */
+	    text-align: center;
+	    border: 2px solid orange; /* 枠線をオレンジに設定 */
+	    background-color: white; /* 背景色を白に設定 */	
+		color: orange; /* 文字色をオレンジに設定 */    
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+	}
+
+	#signup-btn p {
+	    margin: 0; /* 段落のマージンをリセット */
+	}
+	
+	#upgrade {
+		margin-top: 50px;
+		background-color: goldenrod!important;   
+		transition: 0.1s;		
+		height: 70px; /* ボタンの高さを設定 */
+		font-size: 13px; /* フォントサイズを設定 */
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* 水平方向の中央揃え */
+		justify-content: center; /* ボタン中央に配置 */		
+	}
+	
+	.upgrade-title {
+		font-size: 18px; 		
+		margin-bottom: 5px; /* 行間を狭く設定 */		
+	}
+
+	.upgrade-subtitle {
+		font-size: 10px;		
+	    margin-top: -5px; /* 行間を狭く設定 */
+	}
+	
+	.category-btn {
+	    font-size: 0.9rem; /* ボタンの文字サイズを小さくする */
+	    padding: 0.3rem 0.6rem; /* ボタンの内側の余白を小さくする */
+		border-color: lightslategray; /* 枠線の色を変更 */
+	    color: black;   
+	    margin: 0.3rem; /* ボタン間の余白を設定する */
+	    border-radius: 0.25rem; /* 角を丸くする */
+	    width: 50%; /* ボタンの横幅を自動調整する */
+	    display: inline-block; /* ボタンをインラインブロック要素にする */
+	}
+
+	.category-btn:hover {
+	    background-color: lightseagreen; /* ホバー時の背景色を濃い青にする */
+	    color: #ffffff; /* ホバー時の文字色を白にする */
+	}
+	
+	.upgrade-box {	
+		width: 70%;	
+		border: 2px solid #000;		
+		padding: 20px;
+		margin: 50px auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;				    
+	}
+	
+	.slider {
+	   height: 50%; /* ビューポートの高さの50%に設定 */
+	   padding: 0;
+	}
+
+	.slider img {
+	    width: 100%;
+	    height:100%;
+	    object-fit: cover; /* 画像を切り取って全体を表示 */
+	}	
+	
+ @media screen and (min-width: 1400px) {
+   .nagoyameshi-container {
+     max-width: 1200px;
+   }
+ }

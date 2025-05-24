@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">    
+     <head>
+         <div th:replace="~{fragment :: meta}"></div>   
+              
+         <div th:replace="~{fragment :: styles}"></div>
+           
+         <title>クレジットカード情報編集</title>   
+     </head>
+     <body>
+         <div class="nagoyameshi-wrapper">
+             <!-- ヘッダー -->
+             <div th:replace="~{fragment :: header}"></div>
+             
+			 <main>
+			     <div class="container pb-5 nagoyameshi-container">
+			         <div class="row justify-content-center">
+			             <div class="col-xl-5 col-lg-6 col-md-8">
+			                 <nav class="my-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			                     <ol class="breadcrumb mb-0">
+			                         <li class="breadcrumb-item"><a th:href="@{/}">ホーム</a></li>
+			                         <li class="breadcrumb-item"><a th:href="@{/user}">会員情報</a></li>
+			                         <li class="breadcrumb-item"><a th:href="@{/user/edit}">会員情報編集</a></li>
+			                         <li class="breadcrumb-item active" aria-current="page">クレジットカード</li>
+			                     </ol>
+			                 </nav>
+
+			                 <h1 class="mb-4 text-center">クレジットカード情報編集</h1>
+
+			                 <form th:action="@{/user/updateCard}" method="post" th:object="${cardForm}">
+			                     <div class="form-group d-flex justify-content-center my-4">
+			                         <label for="cardNumber">カード番号:</label>
+			                         <input type="text" id="cardNumber" th:field="*{cardNumber}" required>
+			                         <div th:if="${#fields.hasErrors('cardNumber')}" class="text-danger small" th:errors="*{cardNumber}"></div>
+			                     </div>
+			                     <div class="form-group d-flex justify-content-center my-4">
+			                         <label for="expiryDate">有効期限 (MMYY):</label>
+			                         <input type="text" id="expiryDate" th:field="*{expiryDate}" required oninput="formatExpiryDate(this)">
+			                         <div th:if="${#fields.hasErrors('expiryDate')}" class="text-danger small" th:errors="*{expiryDate}"></div>
+			                     </div>
+			                     <div class="form-group d-flex justify-content-center my-4">
+			                         <label for="cvc">セキュリティコード (CVC):</label>
+			                         <input type="text" id="cvc" th:field="*{cvc}" required>
+			                         <div th:if="${#fields.hasErrors('cvc')}" class="text-danger small" th:errors="*{cvc}"></div>
+			                     </div>
+			                     <div class="form-group d-flex justify-content-center my-4">
+			                         <button type="submit" class="btn text-white shadow-sm w-50 nagoyameshi-btn">更新</button>
+			                     </div>
+			                 </form>
+			             </div>
+			         </div>
+			     </div>
+			 </main>
+
+			 <!-- フッター -->
+			  <div th:replace="~{fragment :: footer}"></div>
+		</div>    
+			         
+		<div th:replace="~{fragment :: scripts}"></div>  
+		
+		<script th:src="@{/js/card.js}"></script>  
+	</body>
+ </html>			

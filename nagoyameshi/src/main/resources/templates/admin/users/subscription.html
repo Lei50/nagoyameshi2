@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<div th:replace="~{fragment :: meta}"></div>
+		
+		<div th:replace="~{fragment :: styles}"></div>
+		
+		<title>決済情報の変更及びサブスクリプションのキャンセル</title>
+	</head>
+	<body>
+		<div class="nagoyameshi-wrapper">
+			<!--ヘッダー-->
+			<div th:replace="~{fragment :: header}"></div>
+			
+			<main>
+				<div class="container pt-4 pb-5 nagoyameshi-container">
+					<div class="row justify-content-center">
+						<div class="col-xl-5 col-lg-6 col-md-8">
+							<nav class="my-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+								<ol class="breadcrumb mb-0">
+									<li class="breadcrumb-item"><a th:href="@{/}">ホーム</a></li>
+									<li class="breadcrumb-item"><a th:href="@{/users}">会員情報</a></li>
+									<li class="breadcrumb-item active" aria-current="page">有料会員の解約</li>
+								</ol>
+							</nav>
+							
+							<!--決済方法の変更及びサブスクキャンセル-->
+							<span class="fw-bold">サブスクリプションを解約すると、<br>以下の機能が使用できなくなります。</span><br>
+							<span>・お気に入り機能<br>⇒気になるお店や、また行きたいお店などを登録することができ、<br>一覧で見ることができるためお店探しの手間が省けます！</span><br>
+							<span>・予約機能<br>⇒行きたいお店にアプリ上で予約することが可能となっており、<br>並ばずにお店を利用することができます！</span><br>
+							<span>・レビュー機能<br>⇒お店を利用した感想を記録することができます！</span>
+							<button id="updateButton" class="btn text-white shadow-sm w-50 nagoyameshi-btn">カード情報の変更またはサブスクリプションのキャンセルをする方はこちら</button>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="https://js.stripe.com/v3"></script>
+		<script th:inline="javascript">
+			const portalSessionUrl = /*[[${portalSessionUrl}]]*/"portalSessionUrl";          
+		</script>
+		<script th:src="@{/js/stripe.js}"></script>
+	</body>
+</html>
